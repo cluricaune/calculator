@@ -1,0 +1,288 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#display {
+    grid-area: display;
+    max-height: 125px;
+    background-color: rgb(199, 209, 160);
+    margin: 10px;
+    border-radius: 25px;
+    font-family: monospace;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#clear {
+    grid-area: clear;
+    background-color: rgb(40, 133, 255);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+}
+#posneg {
+    grid-area: posneg;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+}
+#percent {
+    grid-area: percent;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+}
+#divide {
+    grid-area: divide;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+}
+#multiply {
+    grid-area: multiply;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#subtract {
+    grid-area: subtract;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#add {
+    grid-area: add;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#equals {
+    grid-area: equals;
+    background-color: rgb(93, 216, 77);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#period {
+    grid-area: period;
+    background-color: rgb(228, 171, 50);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#one {
+    grid-area: one;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#two {
+    grid-area: two;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#three {
+    grid-area: three;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#four {
+    grid-area: four;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#five {
+    grid-area: five;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#six {
+    grid-area: six;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#seven {
+    grid-area: seven;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#eight {
+    grid-area: eight;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#nine {
+    grid-area: nine;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#zero {
+    grid-area: zero;
+    background-color: rgb(160, 171, 185);
+    margin: 7px;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 110px;
+}
+#calc-body {
+    width: 500px;
+    height: 700px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "display display display display"
+        "clear posneg percent divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three add"
+        "period zero equals equals";
+}
