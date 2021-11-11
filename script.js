@@ -34,4 +34,15 @@ let operate = function(val1,val2,op) {
     return result;
 }
 
-console.log(operate(100,5,"8"));
+const display = document.querySelector("#display");
+const nums = document.querySelectorAll(".num");
+const ops = document.querySelectorAll(".op")
+
+let userInput;
+
+for (let i = 0; i < nums.length; i++) {
+    nums[i].addEventListener("click", function () {
+    userInput = nums[i].textContent;
+    display.textContent += nums[i].textContent;
+    });
+} 
