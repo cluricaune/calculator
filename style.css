@@ -12,6 +12,8 @@ body {
     grid-area: display;
     min-height: 125px;
     max-height: 125px;
+    min-width: 0;
+    max-width: 100%;
     background-color: rgb(199, 209, 160);
     margin: 10px;
     border-radius: 25px;
@@ -20,8 +22,9 @@ body {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    overflow: hidden;
     text-overflow: ellipsis ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 #clear {
     grid-area: clear;
@@ -272,6 +275,7 @@ body {
 }
 #calc-body {
     width: 500px;
+    min-width: 0;
     height: 700px;
     border-style: solid;
     border-width: 5px;
