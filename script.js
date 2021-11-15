@@ -46,6 +46,9 @@ const multiplyBtn = document.querySelector("#multiply");
 const divideBtn = document.querySelector("#divide");
 const percentBtn = document.querySelector("#percent");
 const equalsBtn = document.querySelector("#equals");
+const posneg = document.querySelector("#posneg");
+const percent = document.querySelector("#percent");
+const decimal = document.querySelector("#decimal");
 
 // vars for storing data and checking conditions
 let userInput1 = 0;
@@ -54,6 +57,7 @@ let userInput2 = 0;
 let secondValue = false;
 let userInputOp;
 let existingOp = false;
+let existingResult = false;
 let resetDisplay = false;
 
 // clicking numbers adds them to display and stores them for operations
@@ -62,13 +66,14 @@ for (let i = 0; i < nums.length; i++) {
     if (resetDisplay === true) {
         display.textContent = nums[i].textContent;
         resetDisplay = false;
+        existingResult = false;
     } else {
         display.textContent += nums[i].textContent;
     }
     if (firstValue === false) {
-            userInput1 = parseInt(display.textContent);
+            userInput1 = parseFloat(display.textContent);
         } else if (firstValue === true) {
-            userInput2 = parseInt(display.textContent);
+            userInput2 = parseFloat(display.textContent);
         }
     });
 } 
@@ -81,6 +86,7 @@ clearDisplay.addEventListener("click", function() {
     userInput2 = 0;
     secondValue = false;
     existingOp = false;
+    existingResult = false;
 });
 
 // actions taken when user inputs an operator
@@ -92,7 +98,7 @@ for (let i = 0; i < ops.length; i++) {
       userInputOp = ops[i].id;
       existingOp = true;
       resetDisplay = true;
-    } else if (existingOp === true && resetDisplay === false) {
+    } else if (existingOp === true || existingResult === true) {
       let result = operate(userInput1, userInput2, userInputOp);
       firstValue = true;
       display.textContent = result;
@@ -106,10 +112,69 @@ for (let i = 0; i < ops.length; i++) {
 
 // perform operation on equals click
 equalsBtn.addEventListener("click", function() {
-    let result = operate(userInput1,userInput2,userInputOp);
-    display.textContent = result;
-    userInput1 = result;
-    userInput2 = 0;
-    secondValue = true;
+    if (existingResult === false) {
+        let result = operate(userInput1,userInput2,userInputOp);
+        display.textContent = result;
+        userInput1 = result;
+        userInput2 = 0;
+        secondValue = true;
+        existingOp = false;
+        existingResult = true;
+        resetDisplay = true;
+        userInputOp = null;
+    }
 })
 
+// convert positive/negative
+posneg.addEventListener("click", function() {
+    if (firstValue === false && existingResult === false) {
+        if (userInput1 > 0) {
+            userInput1 = -Math.abs(userInput1);
+            display.textContent = userInput1;
+        } else {
+            userInput1 = Math.abs(userInput1);
+            display.textContent = userInput1;
+        }
+    } else if (firstValue === true && existingResult === false) {
+        if (userInput2 > 0) {
+            userInput2 = -Math.abs(userInput2);
+            display.textContent = userInput2;
+        } else {
+            userInput2 = Math.abs(userInput2);
+            display.textContent = userInput2;
+        }
+    } else if (firstValue === true && existingResult === true) {
+        if (userInput1 > 0) {
+            userInput1 = -Math.abs(userInput1);
+            display.textContent = userInput1;
+        } else {
+            userInput1 = Math.abs(userInput1);
+            display.textContent = userInput1;
+        }
+    }
+})
+
+// convert a number to a percent
+percent.addEventListener("click", function() {
+    if (firstValue === false && existingResult === false) {
+        userInput1 = 0;
+        display.textContent = userInput1;
+    } else if (firstValue === true && existingResult === false) {
+        userInput2 = userInput2* 0.01;
+        display.textContent = userInput2;
+    } else if (firstValue === true && existingResult === true) {
+        userInput1 = userInput1 * 0.01;
+        display.textContent = userInput1;
+    }
+})
+
+// add decimal point to input
+decimal.addEventListener("click", function() {
+    if (firstValue === false && existingResult === false && display.textContent.includes(".") !== true) {
+        userInput1 += ".";
+        display.textContent += ".";
+    } else if (firstValue === true && existingResult === false && display.textContent.includes(".") !== true) {
+        userInput2 += ".";
+        display.textContent += ".";
+    } 
+})

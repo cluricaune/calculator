@@ -20,6 +20,8 @@ body {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis ellipsis;
 }
 #clear {
     grid-area: clear;
@@ -125,7 +127,7 @@ body {
     justify-content: center;
     max-height: 110px;
 }
-#period {
+#decimal {
     grid-area: period;
     background-color: rgb(228, 171, 50);
     margin: 7px;
@@ -286,4 +288,7 @@ body {
         "four five six subtract"
         "one two three add"
         "period zero equals equals";
+}
+.num, .op, .btn {
+    cursor: pointer;
 }
