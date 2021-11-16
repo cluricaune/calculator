@@ -38,9 +38,11 @@ body {
     justify-content: center;
     max-height: 100px;
 }
+#clear:active {
+    background-color: rgb(30, 102, 196);
+}
 #posneg {
     grid-area: posneg;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,7 +55,6 @@ body {
 }
 #percent {
     grid-area: percent;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -66,7 +67,6 @@ body {
 }
 #divide {
     grid-area: divide;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -79,7 +79,6 @@ body {
 }
 #multiply {
     grid-area: multiply;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -92,7 +91,6 @@ body {
 }
 #subtract {
     grid-area: subtract;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -105,7 +103,6 @@ body {
 }
 #add {
     grid-area: add;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -129,9 +126,11 @@ body {
     justify-content: center;
     max-height: 110px;
 }
+#equals:active {
+    background-color: rgb(69, 158, 57);
+}
 #decimal {
     grid-area: period;
-    background-color: rgb(228, 171, 50);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -144,7 +143,6 @@ body {
 }
 #one {
     grid-area: one;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -157,7 +155,6 @@ body {
 }
 #two {
     grid-area: two;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -170,7 +167,6 @@ body {
 }
 #three {
     grid-area: three;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -183,7 +179,6 @@ body {
 }
 #four {
     grid-area: four;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -196,7 +191,6 @@ body {
 }
 #five {
     grid-area: five;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -209,7 +203,6 @@ body {
 }
 #six {
     grid-area: six;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -222,7 +215,6 @@ body {
 }
 #seven {
     grid-area: seven;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -235,7 +227,6 @@ body {
 }
 #eight {
     grid-area: eight;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -248,7 +239,6 @@ body {
 }
 #nine {
     grid-area: nine;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -261,7 +251,6 @@ body {
 }
 #zero {
     grid-area: zero;
-    background-color: rgb(160, 171, 185);
     margin: 7px;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -294,4 +283,18 @@ body {
 }
 .num, .op, .btn {
     cursor: pointer;
+}
+.num {
+    background-color: rgb(157, 169, 185);
+}
+.op, .btn {
+    background-color: rgb(228, 171, 50);
+}
+.num:active {
+    background-color: rgb(119, 129, 141);
+    box-shadow: inset 0px 0px 10px #555;
+}
+.op:active, .btn:active {
+    background-color: rgb(179, 134, 39);
+    box-shadow: inset 0px 0px 10px #555;
 }
